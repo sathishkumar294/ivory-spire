@@ -1,0 +1,5 @@
+services:
+  web:
+    build: .
+    ports:
+    - 12100:80
