@@ -21,22 +21,26 @@ function App() {
   }, []);
 
   return (
-    <div className="shortcuts-container">
-      <div className="name name-effects">
-        {Array.from(name).map((char) => (
-          <span>{char}</span>
-        ))}{" "}
-      </div>{" "}
-      {shortcuts.map((shortcut) => (
-        <a href={shortcut.url} className="shortcut-card" target="_blank">
-          <img
-            src={shortcut.icon}
-            alt={shortcut.title}
-            className="shortcut-image"
-          />
-          <span className="shortcut-title"> {shortcut.title} </span>
-        </a>
-      ))}
+    <div className="container">
+      <div className="name-container">
+        <div className="name name-effects">
+          {Array.from(name).map((char) => (
+            <span>{char}</span>
+          ))}
+        </div>
+      </div>
+      <div className="shortcuts-container">
+        {shortcuts.map((shortcut) => (
+          <a href={shortcut.url} className="shortcut-card" target="_blank">
+            <img
+              src={shortcut.icon}
+              alt={shortcut.title}
+              className="shortcut-image"
+            />
+            <span className="shortcut-title"> {shortcut.title} </span>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

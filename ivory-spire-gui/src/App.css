@@ -1,10 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-container {
+  display: flex;
+}
+
 .shortcuts-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  padding: 30px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fill, 200px); /* Fixed width for cards */
+  gap: 20px;
+  padding: 20px;
+  max-width: fit-content;
   width: 100%;
+  justify-content: center; /* Center the grid items */
+  align-items: center;
 }
 
 .shortcut-card {
@@ -16,46 +28,52 @@
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease,
+    background-color 0.3s ease;
   text-decoration: none;
   color: #333;
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
   padding: 20px;
 }
 
 .shortcut-card:hover {
-  transform: scale(2) rotate(3deg); /* Scale and rotate on hover */
+  transform: scale(2) rotate(3deg);
 }
+
 .shortcut-image:hover {
-  transform: scale(1.5) rotate(-3deg); /* Scale and rotate on hover */
+  transform: scale(1.5) rotate(-3deg);
 }
-.shortcut-card:hover, .shortcut-image:hover {
+
+.shortcut-card:hover,
+.shortcut-image:hover {
   transition: transform 1s ease;
 }
 
 .shortcut-image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-bottom: 15px;
-  animation: scale 5s ease-in-out forwards, rotate 0.5s ease-in-out forwards,;
+  animation: scale 5s ease-in-out forwards, rotate 0.5s ease-in-out forwards;
 }
 
 .shortcut-title {
   font-size: 24px;
   text-align: center;
   padding: 0 10px 15px 10px;
-  font-family: 'Comic Sans MS', monospace;
+  font-family: "Comic Sans MS", monospace;
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(30px);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -66,14 +84,15 @@
 .shortcut-card:nth-child(odd) {
   animation-delay: 0.2s;
 }
-.name {    
-  grid-column: 1 / -1;  
+
+.name {
+  grid-column: 1 / -1;
   justify-self: center;
 }
 
 .name-effects {
-  font-family: 'Bangers', cursive;
-  font-size: 8em;
+  font-family: "Bangers", cursive;
+  font-size: 16em;
   font-weight: normal;
   text-align: center;
   margin-bottom: 20px;
@@ -84,19 +103,40 @@
   animation: waveRide 5s ease-in-out infinite alternate; /* Wave animation */
 }
 
-.name-effects span:nth-child(1) { animation-delay: 0s; }
-.name-effects span:nth-child(2) { animation-delay: 0.3s; }
-.name-effects span:nth-child(3) { animation-delay: 0.6s; }
-.name-effects span:nth-child(4) { animation-delay: 0.9s; }
-.name-effects span:nth-child(5) { animation-delay: 1.2s; }
-.name-effects span:nth-child(6) { animation-delay: 1.5s; }
-.name-effects span:nth-child(7) { animation-delay: 1.8s; }
-.name-effects span:nth-child(8) { animation-delay: 2.1s; }
-.name-effects span:nth-child(9) { animation-delay: 2.4s; }
-.name-effects span:nth-child(10) { animation-delay: 2.7s; }
+.name-effects span:nth-child(1) {
+  animation-delay: 0s;
+}
+.name-effects span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.name-effects span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.name-effects span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.name-effects span:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.name-effects span:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.name-effects span:nth-child(7) {
+  animation-delay: 1.8s;
+}
+.name-effects span:nth-child(8) {
+  animation-delay: 2.1s;
+}
+.name-effects span:nth-child(9) {
+  animation-delay: 2.4s;
+}
+.name-effects span:nth-child(10) {
+  animation-delay: 2.7s;
+}
 
 @keyframes waveRide {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     color: #ff4081;
@@ -109,8 +149,10 @@
 }
 
 .name-effects span:nth-child(even) {
-  @keyframes waveRide { /* Override for even letters */
-    0%, 100% {
+  @keyframes waveRide {
+    /* Override for even letters */
+    0%,
+    100% {
       transform: translateY(0) rotate(0deg);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       color: #48dbfb;
@@ -120,5 +162,51 @@
       text-shadow: 0 0 10px #6fcf97, 0 0 20px #a55eea;
       color: #6fcf97;
     }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .name-effects {
+    font-size: 8em;
+  }
+
+  .shortcuts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .shortcut-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .shortcut-title {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .name-effects {
+    font-size: 8em;
+  }
+
+  .shortcuts-container {
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, 250px); /* Larger fixed width */
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .shortcut-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .shortcut-title {
+    font-size: 1.4em;
   }
 }
