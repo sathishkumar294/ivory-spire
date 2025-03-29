@@ -1,5 +1,6 @@
 services:
   custom-home-page:
+    container-name: kids-home-page
     build: .
     ports:
       - 12100:80
