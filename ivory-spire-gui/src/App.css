@@ -66,10 +66,42 @@
 .shortcut-card:nth-child(odd) {
   animation-delay: 0.2s;
 }
-.name {
-  font-family: 'Comic Sans MS', monospace;
-  font-size: 128px;
-  grid-column: 1 / -1;
-  color: cornsilk;
+.name {    
+  grid-column: 1 / -1;  
   justify-self: center;
+}
+
+.name-glowing-text {
+  font-family: 'Bangers', cursive; /* Playful, comic-like font */
+  font-size: 4em; /* Large, attention-grabbing size */
+  font-weight: normal; /* Normal weight for a light, airy feel */
+  color: #ff4081; /* Bright, playful pink */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffeb3b, #4caf50); /* Cheerful gradient */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+  animation: colorShift 6s linear infinite alternate, bounce 3s ease-in-out infinite alternate; /* Add color and bounce animations */
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Slightly higher bounce */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

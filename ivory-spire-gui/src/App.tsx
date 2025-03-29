@@ -9,16 +9,20 @@ type Shortcut = {
 
 function App() {
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
+  const [name, setName] = useState<string>();
 
   useEffect(() => {
     fetch("/shortcuts.json")
       .then((response) => response.json())
-      .then((data) => setShortcuts(data.shortcuts));
+      .then((data) => {
+        setShortcuts(data.shortcuts);
+        setName(data.name);
+      });
   }, []);
 
   return (
     <div className="shortcuts-container">
-      <div className="name"> MAGILAN </div>{" "}
+      <div className="name name-glowing-text"> {name} </div>{" "}
       {shortcuts.map((shortcut) => (
         <a href={shortcut.url} className="shortcut-card" target="_blank">
           <img
