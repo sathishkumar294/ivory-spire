@@ -3,12 +3,12 @@
     {
       "title": "Jellyfin",
       "url": "http://192.168.1.14:8096",
-      "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/jellyfin-light.webp"
+      "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/jellyfin.webp"
     },
     {
       "title": "Masha et Michka",
       "url": "https://www.youtubekids.com/search?q=masha+et+michka",
-      "icon": "/icons/masha_et_michka.webp"
+      "icon": "/icons/masha_et_michka.png"
     },
     {
       "title": "Peppa Pig",

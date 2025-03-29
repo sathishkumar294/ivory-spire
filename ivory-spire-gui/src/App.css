@@ -23,15 +23,12 @@
 }
 
 .shortcut-card:hover {
-  transform: scale(1.2) rotate(3deg); /* Scale and rotate on hover */
+  transform: scale(2) rotate(3deg); /* Scale and rotate on hover */
 }
 .shortcut-image:hover {
-  transform: scale(1.2) rotate(-3deg); /* Scale and rotate on hover */
+  transform: scale(1.5) rotate(-3deg); /* Scale and rotate on hover */
 }
 .shortcut-card:hover, .shortcut-image:hover {
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-  filter: brightness(1.2) saturate(1.1); /* Brighter and more saturated */
-  background-color: rgba(255, 255, 255, 0.95); /* Slightly brighter background */
   transition: transform 1s ease;
 }
 
@@ -44,9 +41,10 @@
 }
 
 .shortcut-title {
-  font-size: 16px;
+  font-size: 24px;
   text-align: center;
   padding: 0 10px 15px 10px;
+  font-family: 'Comic Sans MS', monospace;
 }
 
 /* Animations */
