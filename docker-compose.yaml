@@ -1,5 +1,5 @@
 services:
-  web:
+  custom-home-page:
     build: .
     ports:
-    - 12100:80
+      - 12100:80
