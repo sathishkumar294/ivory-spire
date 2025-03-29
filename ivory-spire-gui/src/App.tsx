@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Shortcut = {
   title: string;
@@ -20,7 +20,7 @@ function App() {
     <div className="shortcuts-container">
       <div className="name"> MAGILAN </div>{" "}
       {shortcuts.map((shortcut) => (
-        <a href={shortcut.url} className="shortcut-card">
+        <a href={shortcut.url} className="shortcut-card" target="_blank">
           <img
             src={shortcut.icon}
             alt={shortcut.title}

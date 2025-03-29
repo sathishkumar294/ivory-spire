@@ -1,34 +1,19 @@
 {
   "shortcuts": [
     {
-      "title": "Google",
-      "url": "https://www.google.com",
-      "icon": "https://www.google.com/favicon.ico"
+      "title": "Jellyfin",
+      "url": "http://192.168.1.14:8096",
+      "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/jellyfin-light.webp"
     },
     {
-      "title": "YouTube",
-      "url": "https://www.youtube.com",
-      "icon": "https://www.youtube.com/favicon.ico"
+      "title": "Masha et Michka",
+      "url": "https://www.youtubekids.com/search?q=masha+et+michka",
+      "icon": "/icons/masha_et_michka.webp"
     },
     {
-      "title": "GitHub",
-      "url": "https://github.com",
-      "icon": "https://github.com/favicon.ico"
-    },
-    {
-      "title": "Stack Overflow",
-      "url": "https://stackoverflow.com",
-      "icon": "https://stackoverflow.com/favicon.ico"
-    },
-    {
-      "title": "Reddit",
-      "url": "https://www.reddit.com",
-      "icon": "https://www.reddit.com/favicon.ico"
-    },
-    {
-      "title": "Twitter",
-      "url": "https://www.twitter.com",
-      "icon": "https://abs.twimg.com/favicons/favicon.ico"
+      "title": "Peppa Pig",
+      "url": "https://www.youtubekids.com/channel/UCXptamDYEVcU4JCio30hYTw",
+      "icon": "/icons/peppa_pig.png"
     }
   ]
 }
