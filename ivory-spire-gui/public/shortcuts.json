@@ -15,6 +15,11 @@
       "title": "Peppa Pig",
       "url": "https://www.youtubekids.com/channel/UCXptamDYEVcU4JCio30hYTw",
       "icon": "/icons/peppa_pig.png"
+    },
+    {
+      "title": "Tate's coloring",
+      "url": "https://www.tate.org.uk/kids/games-quizzes/tate-paint",
+      "icon": "/icons/tate_paint.png"
     }
   ]
 }
