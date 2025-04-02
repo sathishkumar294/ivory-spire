@@ -35,7 +35,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(to bottom left, #eee1bd,#ecd6b7,#eeceb6,#eebab6,#d3a0be,#c09fbe,#b09cc1,#9b9dc5,#809cca,#659aca,#4397c3);
     overflow: hidden;
 }
 
