@@ -6,7 +6,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f8ff; /* Light, friendly background */
+  background: linear-gradient(
+    to bottom left,
+    #eee1bd,
+    #ecd6b7,
+    #eeceb6,
+    #eebab6,
+    #d3a0be,
+    #c09fbe,
+    #b09cc1,
+    #9b9dc5,
+    #809cca,
+    #659aca,
+    #4397c3
+  );
   color: #333;
 }
 
