@@ -21,23 +21,32 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="name-container">
+    <div className="mx-auto p-4 w-full">
+      <div className="name-container font-bold mb-4 text-center">
         <div className="name name-effects">
           {Array.from(name).map((char) => (
-            <span>{char}</span>
+            <span className="text-[4rem]">{char}</span>
           ))}
         </div>
       </div>
-      <div className="shortcuts-container">
-        {shortcuts.map((shortcut) => (
-          <a href={shortcut.url} className="shortcut-card" target="_blank">
-            <img
-              src={shortcut.icon}
-              alt={shortcut.title}
-              className="shortcut-image"
-            />
-            <span className="shortcut-title"> {shortcut.title} </span>
+      <div className="shortcuts-container grid gap-1 justify-center">
+        {shortcuts.map((shortcut, i) => (
+          <a
+            href={shortcut.url}
+            key={i}
+            className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col"
+            target="_blank"
+          >
+            <div className="w-full aspect-square bg-gray-100">
+              <img
+                src={shortcut.icon}
+                alt={shortcut.title}
+                className="w-full h-full object-cover p-2"
+              />
+            </div>
+            <div className="p-2 text-center font-medium text-sm kids-font">
+              {shortcut.title}
+            </div>
           </a>
         ))}
       </div>
