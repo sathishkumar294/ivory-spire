@@ -1,0 +1,21 @@
+/* src/components/Header.css */
+.header {
+  width: 100%;
+  padding: 20px 10px; /* Add some vertical padding */
+  text-align: center; /* Center align the text */
+  margin-bottom: 30px; /* Space below the header */
+}
+
+.name {
+  font-family: var(--kid-font); /* Use the kid-friendly font */
+  color: #ff6347; /* Tomato color - friendly */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  /* Responsive Font Size using clamp(MIN, PREFERRED, MAX) */
+  /* Adjust values as needed */
+  /* Min 2.5rem, Preferred 8% of viewport width, Max 6rem */
+  font-size: clamp(2.5rem, 8vw, 6rem);
+
+  /* Ensure it breaks nicely if name is very long */
+  word-wrap: break-word;
+}

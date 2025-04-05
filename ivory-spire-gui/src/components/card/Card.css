@@ -1,0 +1,46 @@
+/* src/components/Card.css */
+.shortcut-card {
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack image and title vertically */
+  align-items: center; /* Center items horizontally */
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Use default text color */
+  background-color: #ffffff;
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: center;
+
+  /* --- Responsive Width --- */
+  /* Set base width for flexbox calculations */
+  flex-basis: clamp(200px, 30%, 400px); /* Min 200px, try for 30%, Max 400px */
+  /* Ensure it doesn't shrink below min or grow beyond max */
+  min-width: 200px;
+  max-width: 256px;
+  /* Allow cards to grow if there's extra space */
+  flex-grow: 1;
+}
+
+.shortcut-card:hover {
+  transform: translateY(-5px) scale(1.03); /* Lift and slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%; /* Make image take full width of its container */
+  height: 150px; /* Fixed height for consistency */
+  object-fit: contain; /* Scale image while preserving aspect ratio, fitting within bounds */
+  margin-bottom: 15px; /* Space between image and title */
+  border-radius: 8px; /* Slightly rounded corners for the image */
+  background-color: #ffffff; /* Light background if image is transparent or small */
+}
+
+.card-title {
+  font-family: var(--kid-font);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e936b3;
+  /* Prevent title from overflowing */
+  word-wrap: break-word;
+}

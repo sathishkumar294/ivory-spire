@@ -4,22 +4,47 @@
     {
       "title": "Jellyfin",
       "url": "http://192.168.1.14:8096",
-      "icon": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/jellyfin.webp"
+      "icon": "/images/jellyfin.webp"
     },
     {
       "title": "Masha et Michka",
       "url": "https://www.youtubekids.com/search?q=masha+et+michka",
-      "icon": "/icons/masha_et_michka.png"
+      "icon": "/images/masha_et_michka.png"
     },
     {
       "title": "Peppa Pig",
       "url": "https://www.youtubekids.com/channel/UCXptamDYEVcU4JCio30hYTw",
-      "icon": "/icons/peppa_pig.png"
+      "icon": "/images/peppa_pig.png"
     },
     {
       "title": "Tate's coloring",
       "url": "https://www.tate.org.uk/kids/games-quizzes/tate-paint",
-      "icon": "/icons/tate_paint.png"
+      "icon": "/images/tate_paint.png"
+    },
+    {
+      "title": "Cool Math Games",
+      "icon": "/images/cool-math-games.svg",
+      "url": "https://www.coolmathgames.com/"
+    },
+    {
+      "title": "PBS Kids",
+      "icon": "/images/pbs-kids.svg",
+      "url": "https://pbskids.org/"
+    },
+    {
+      "title": "Nat Geo Kids",
+      "icon": "/images/nat-geo-kids.png",
+      "url": "https://kids.nationalgeographic.com/"
+    },
+    {
+      "title": "Scratch",
+      "icon": "/images/scratch-mit.png",
+      "url": "https://scratch.mit.edu/"
+    },
+    {
+      "title": "Starfall",
+      "icon": "/images/starfall.png",
+      "url": "https://www.starfall.com/h/"
     }
   ]
 }

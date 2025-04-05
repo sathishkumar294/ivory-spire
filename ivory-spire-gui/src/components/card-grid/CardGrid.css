@@ -1,0 +1,12 @@
+/* src/components/CardGrid.css */
+.card-grid {
+  display: flex; /* Enable Flexbox */
+  flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+  justify-content: center; /* Center cards horizontally */
+  align-items: stretch; /* Make cards in the same row have equal height (if content differs) */
+  gap: 25px; /* Spacing between cards */
+  padding: 20px; /* Padding around the grid */
+  width: 100%; /* Take full available width */
+  max-width: 1400px; /* Optional: Limit max width on very large screens */
+  margin: 0 auto; /* Center the grid container itself if max-width is applied */
+}
