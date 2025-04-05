@@ -1,5 +1,4 @@
 // src/components/Card.js
-import React from "react";
 import "./Card.css";
 
 interface ICardProps {

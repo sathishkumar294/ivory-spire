@@ -1,5 +1,4 @@
 // src/components/CardGrid.js
-import React from "react";
 import "./CardGrid.css";
 import Card from "../card/Card";
 
