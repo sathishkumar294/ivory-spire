@@ -28,12 +28,23 @@ export default defineConfig({
         ],
       },
       workbox: {
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,webp}"],
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.includes("shortcuts.json"),
-            handler: "NetworkFirst",
+            handler: "StaleWhileRevalidate",
             options: {
               cacheName: "data-cache",
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith("/images/"),
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "image-cache",
               cacheableResponse: {
                 statuses: [0, 200],
               },
