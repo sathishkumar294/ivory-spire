@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Header from "./components/header/Header";
 import CardGrid from "./components/card-grid/CardGrid";
+import OfflineIndicator from "./components/OfflineIndicator";
 
 function App() {
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
@@ -23,6 +24,7 @@ function App() {
         {/* Use main tag for semantic content area */}
         <CardGrid items={shortcuts} />
       </main>
+      <OfflineIndicator />
     </div>
   );
 }
